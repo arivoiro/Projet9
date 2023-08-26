@@ -1,9 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+
+	<title>Portfolio Photographe Nina Carducci</title>
+
+	<meta name="description" content="Découvrez l'univers captivant de la photographe Nina Carducci, à travers son portfolio professionnel.">
+
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Bordeaux, France",
+			"postalCode": "33200",
+			"streetAddress": "68 avenue Alsace-Lorraine"
+		  },
+		  "openingHours": "Mo-Fr 10:00-19:00",
+		  "telephone": "05 56 67 78 89",
+		  "name": "Nina Carducci",
+		  "image": "./assets/images/nina.webp"
+		}
+	</script>
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@ninacarducci">
+	<meta name="twitter:title" content="Photographe Nina Carducci">
+	<meta name="twitter:description" content="Découvrez l'univers captivant de la photographe Nina Carducci, à travers son portfolio professionnel.">
+	<meta name="twitter:creator" content="@ninacarducci">
+	<!-- Twitter Summary card images must be at least 200x200px -->
+	<meta name="twitter:image" content="./assets/images/nina.webp">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Photographe Nina Carducci" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://127.0.0.1:5500/index.html" />
+	<meta property="og:image" content="./assets/images/nina.webp" />
+	<meta property="og:description" content="Découvrez l'univers captivant de la photographe Nina Carducci, à travers son portfolio professionnel." /> 
+	<meta property="og:site_name" content="Nina Carducci" />
+	<meta property="fb:admins" content="61550628329568" />
+
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+	<link rel="preload" href="./assets/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+	</noscript>
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,13 +64,13 @@
 <body>
 <div class="top-header">
 	<h3 class="name">Nina Carducci</h3>
-	<div class="nav">   
+	<div class="nav">
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" alt=""></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" alt="instagram"></a></li>
 		</ul>
 	</div>
 </div>
@@ -40,13 +84,17 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100 h-100" alt="...">
+				<picture>
+					<source media="(max-width: 499px)" srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-500w.webp" />
+					<source media="(min-width: 500px)" srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" />
+					<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100 h-100" alt="Ryoji Iwata">
+				</picture>
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100 h-100" alt="...">
+				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100 h-100" alt="Nicholas Green">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100 h-100" alt="...">
+				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100 h-100" alt="Edward Cisneros">
 			</div>
 		</div>
 
@@ -62,7 +110,7 @@
 </div>
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/nina.webp">
+		<img src="./assets/images/nina.webp" alt="nina">
 	</div>
 	<div id="about-me">
 		<h3 class="about-me__title">A propos de moi</h3>
@@ -75,15 +123,15 @@
 	<h3 class="title">Portfolio</h3>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp"/>
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp"/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Aaron Paul"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Ali Morshedlou"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Jason Goodman"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Hannah Busing"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Ade Tunji"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Jakob Owens"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Nino Van Prattenburg"/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Austin Neill"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Mateus Campos Felipe"/>
 		</div>
 	</div>
 	<div class="quote">
@@ -145,17 +193,23 @@
 			<h3>Une question ? Une demande de devis ?</h3>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
-				<label>Nom</label>
-				<input type="text" name="nom" id="nom">
-				<label>Email</label>
-				<input type="email" name="email" id="email">
-				<label>Message</label>
-				<textarea name="message" id="message" cols="30" rows="10"></textarea>
-				<input type="submit" value="Envoyer"/>
+				<label>
+					Nom
+					<input type="text" name="nom" id="nom">
+				</label>
+				<label>
+					Email
+					<input type="email" name="email" id="email">
+				</label>
+				<label>
+					Message
+					<textarea name="message" id="message" cols="30" rows="10"></textarea>
+					<input type="submit" value="Envoyer"/>
+				</label>
 			</form>
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/camera.webp">
+			<img src="./assets/images/camera.webp" alt="Camera">
 		</div>
 	</div>
 </div>
